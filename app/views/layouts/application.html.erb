@@ -2,7 +2,9 @@
 <html>
   <head>
     <title>AlphaBlog</title>
+    <link rel="icon" type="image" href="">
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -11,7 +13,9 @@
   </head>
 
   <body>
-  <%= render 'layouts/messages' %>
+    <%= render 'layouts/messages' %>
+    <%= render 'layouts/navigation' %>
+
     <%= yield %>
   </body>
 </html>

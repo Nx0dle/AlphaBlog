@@ -1,3 +1,21 @@
-<h1>This is the home page</h1>
+<section id="hero">
+  <h2>Alpha Blog</h2>
 
-<p><%= link_to "Articles listing", articles_path %> | <%= link_to "About page", about_path %></p>
+  <div class="items">
+    <a><%= image_tag("hero-bg-home.jpg", :alt => "herobg") %></a>
+    <div class="container">
+      <h4>Lorem ipsum</h4>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque in orci in sapien aliquet porta id id nulla. Maecenas non magna metus. In vel tristique ligula. Sed sapien quam, dictum eget posuere et, finibus id est. Vestibulum vitae ante nisi. Curabitur feugiat, risus at ultrices elementum, mi neque vulputate metus, vulputate aliquet diam tortor in orci. Mauris augue mauris, iaculis eget tellus nec, tempus pretium dui. Mauris eget risus placerat, dapibus tortor commodo, tincidunt justo. Fusce porta quis lacus sit amet luctus. Proin sodales rhoncus elit eget ultrices. Sed vestibulum erat eget tellus luctus semper. Nulla suscipit, justo sed ultricies imperdiet, ipsum justo rhoncus nulla, sed tempor nisi metus non urna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lacus magna, gravida et varius nec, facilisis sit amet purus.
+
+        Donec mollis quam enim, sed aliquet risus commodo eu.</p>
+      <div class="buttons">
+        <button class="normal">Learn More</button>
+        <button class="side"> Sign Up</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<%= render 'pages/articles-listing' %>
+
+<!--<p><%= link_to "Articles listing", articles_path %> | <%= link_to "About page", about_path %></p>-->

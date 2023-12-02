@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+#articles {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 0 10%;
+}
+
+#articles .text {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#articles .text h4 .all-articles {
+    text-decoration: none;
+    color: #5f5f5f;
+}
+
+#articles .articles-grid {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 33% 33% 33%;
+    grid-row-gap: 100px;
+}
+
+#articles .articles-grid .article-card {
+    display: flex;
+    flex-direction: column;
+}
+
+#articles .articles-grid .article-card .article-title {
+    text-decoration: none;
+    color: black;
+}
+
+#articles .articles-grid .article-card .desc {
+    font-size: 16px;
+    color: #2E2F30;
+}
