@@ -8,6 +8,7 @@
       <div class="article-card">
         <h6><%= link_to article.title, article_path(article), class: "article-title"%></h6>
         <p class="desc"><%= article.description %></p>
+        <%= link_to 'Read more', article_path(article), class: "read-more" %>
         <p><%=  article.created_at %></p>
       </div>
     <% end %>
