@@ -15,7 +15,7 @@
 
 #articles .text h4 .all-articles {
     text-decoration: none;
-    color: #5f5f5f;
+    color: teal;
 }
 
 #articles .articles-grid {
@@ -33,9 +33,22 @@
 #articles .articles-grid .article-card .article-title {
     text-decoration: none;
     color: black;
+    transition: 0.3s ease;
+}
+
+#articles .articles-grid .article-card .article-title:hover {
+    
 }
 
 #articles .articles-grid .article-card .desc {
     font-size: 16px;
     color: #2E2F30;
+    overflow: hidden;
+    text-overflow: fade;
+    max-height: 40%;
+}
+
+#articles .articles-grid .article-card .read-more {
+    text-decoration: none;
+    color: teal;
 }

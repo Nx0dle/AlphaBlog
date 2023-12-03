@@ -14,10 +14,11 @@
     width: 100%;
 }
 
-#header a {
+#header .navbar-brand {
     font-size: 30px;
     font-weight: 700;
-    color: black;
+    color: teal;
+    text-decoration: none;
 }
 
 #navbar {
