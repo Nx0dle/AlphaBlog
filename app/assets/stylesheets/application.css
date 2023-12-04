@@ -158,8 +158,8 @@ button.side:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 10px;
+    margin: 20px 20px;
     border: green solid 1px;
     border-radius: 10px;
-    background-color: rgba(0, 128, 0, 0.51);
+    background-color: rgba(0, 128, 0, 0.27);
 }
