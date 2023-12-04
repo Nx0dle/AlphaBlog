@@ -7,13 +7,13 @@
     padding: 0 10%;
 }
 
-#articles .text {
+#articles .text-side-articles {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
-#articles .text h4 .all-articles {
+#articles .text-side-articles h4 .all-articles {
     text-decoration: none;
     color: teal;
 }
@@ -43,9 +43,6 @@
 #articles .articles-grid .article-card .desc {
     font-size: 16px;
     color: #2E2F30;
-    overflow: hidden;
-    text-overflow: fade;
-    max-height: 40%;
 }
 
 #articles .articles-grid .article-card .read-more {

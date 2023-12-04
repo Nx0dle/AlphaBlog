@@ -1,0 +1,21 @@
+#article-show {
+    padding: 30px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#article-show .section-p1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+}
+
+#article-show .article-action {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+}

@@ -1,7 +1,11 @@
-<h1>Show article details</h1>
-<p><strong>Title: </strong><%= @article.title %></p>
-<p><strong>Description: </strong><%= @article.description %></p>
-
-<%= link_to 'Edit', edit_article_path(@article) %> |
-<%= link_to 'Delete', article_path(@article), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } %> |
-<%= link_to 'Go back', articles_path %>
+<section id="article-show">
+  <div class="section-p1">
+    <h4><%= @article.title %></h4>
+    <p><%= @article.description %></p>
+  </div>
+  <div class="article-action">
+    <a><%= link_to 'Go to articles listing', articles_path, class: "btn-normal" %></a>
+    <a><%= link_to 'Edit', edit_article_path(@article), class: "btn-side" %></a>
+    <a><%= link_to 'Delete', article_path(@article), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" }, class: "btn-side-warning" %></a>
+  </div>
+</section>

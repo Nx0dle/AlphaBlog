@@ -1,5 +1,7 @@
-<h1>Create a new article</h1>
-
-<%= render 'form' %>
-
-<p><%= link_to 'Go back', articles_path %></p>
+<section id="article-form">
+  <div id="section-p1">
+    <h1>Create a new article</h1><br>
+    <%= render 'form' %>
+  </div>
+  <a><%= link_to 'Go to articles listing', articles_path, class: "btn-normal" %></a>
+</section>

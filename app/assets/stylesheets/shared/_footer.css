@@ -2,8 +2,9 @@
 
 #footer {
     background-color: teal;
-    bottom: 0;
     height: 20vh;
+    width: 100%;
+    bottom: 0;
     display: flex;
     justify-content: center;
     align-items: center;

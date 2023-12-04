@@ -1,5 +1,7 @@
-<h1>Edit an article</h1>
-
-<%= render 'form' %>
-
-<p><%= link_to 'Cancel and go back', articles_path %></p>
+<section id="article-form">
+  <div id="section-p1">
+    <h1>Edit an article</h1><br>
+    <%= render 'form' %>
+  </div>
+  <a><%= link_to 'Cancel and go back', articles_path, class: "btn-normal" %></a>
+</section>

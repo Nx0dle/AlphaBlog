@@ -1,22 +1,26 @@
 <% if @article.errors.any? %>
-  <h2>The following errors prevented the article from being updated:</h2>
-  <ul>
-    <% @article.errors.full_messages.each do |msg| %>
-      <li><%= msg %></li>
-    <% end %>
-  </ul>
+  <div class="article-error">
+    <h3>The following errors prevented the article from being updated:</h3>
+    <ul>
+      <% @article.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  </div>
 <% end %>
 
-<%= form_with(model: @article, local: true) do |f| %>
-  <p>
-    <%= f.label :title %><br/>
-    <%= f.text_field :title %>
-  </p>
-  <p>
-    <%= f.label :description %><br/>
-    <%= f.text_area :description %>
-  </p>
-  <p>
-    <%= f.submit %>
-  </p>
-<% end %>
+<section id="article-form-shared">
+  <%= form_with(model: @article, local: true, class: "article-form-container") do |f| %>
+    <div class="article-form-shared-title">
+      <strong><%= f.label :title %><br/></strong>
+      <%= f.text_field :title, placeholder: "Write Title..." %>
+    </div>
+    <div class="article-form-shared-desc">
+      <strong><%= f.label :description %><br/></strong>
+      <%= f.text_area :description, placeholder: "Write Description..." %>
+    </div>
+    <a class="btn-submit">
+      <%= f.submit %>
+    </a>
+  <% end %>
+</section>

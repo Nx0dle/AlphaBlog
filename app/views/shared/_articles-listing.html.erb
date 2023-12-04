@@ -1,5 +1,5 @@
 <section id="articles">
-  <div class="text">
+  <div class="text-side-articles">
     <h3>Article Updates</h3>
     <h4><%= link_to "View all", articles_path, class: "all-articles"%></h4>
   </div>
@@ -7,9 +7,9 @@
     <% @articles.each do |article| %>
       <div class="article-card">
         <h6><%= link_to article.title, article_path(article), class: "article-title"%></h6>
-        <p class="desc"><%= article.description %></p>
+        <p class="desc"><%= article.description.truncate(150) %></p>
         <%= link_to 'Read more', article_path(article), class: "read-more" %>
-        <p><%=  article.created_at %></p>
+        <p><%=  time_ago_in_words(article.created_at) %></p>
       </div>
     <% end %>
   </div>
