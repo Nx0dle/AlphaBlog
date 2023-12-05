@@ -122,8 +122,7 @@ p {
 }
 
 .article-created-msg {
-    width: 20vw;
-    height: 4vh;
+    padding: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
