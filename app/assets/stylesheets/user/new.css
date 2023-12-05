@@ -1,0 +1,89 @@
+#sign-up-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+}
+
+#sign-up-body #sign-up-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 80px;
+    border-radius: 15px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+}
+
+#sign-up-body #sign-up-card .sign-up-card-text {
+    text-align: center;
+}
+
+#sign-up-body #sign-up-card .sign-up-card-form {
+    width: 100%
+}
+
+#sign-up-body #sign-up-card .sign-up-card-form small a {
+    text-decoration: none;
+    color: teal;
+}
+
+#sign-up-body #sign-up-card .sign-up-card-form small a:hover {
+    text-decoration: underline;
+}
+
+#sign-up-body #sign-up-card .users-form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+#sign-up-body #sign-up-card .users-form-container .users-form-shared-username,
+#sign-up-body #sign-up-card .users-form-container .users-form-shared-email,
+#sign-up-body #sign-up-card .users-form-container .users-form-shared-pass {
+    width: 100%;
+}
+
+#sign-up-body #sign-up-card .users-form-container #user_username,
+#sign-up-body #sign-up-card .users-form-container #user_email,
+#sign-up-body #sign-up-card .users-form-container #user_password {
+    padding: 10px;
+    border-radius: 10px;
+    border: grey solid 1px;
+    width: 100%;
+}
+
+#sign-up-body #sign-up-card .users-form-container #user_username:focus,
+#sign-up-body #sign-up-card .users-form-container #user_email:focus,
+#sign-up-body #sign-up-card .users-form-container #user_password:focus {
+    border: teal solid 2px;
+    outline: 0;
+    border-radius: 7px;
+}
+
+#sign-up-body #sign-up-card .users-form-container .btn-signup {
+    cursor: pointer;
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 42px;
+    color: white;
+    font-weight: 500;
+    border-radius: 10px;
+    border: 0;
+    background-color: teal;
+    transition: 0.3s ease;
+    box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
+}
+
+#sign-up-body #sign-up-card .users-form-container .btn-signup:hover {
+    border-radius: 7px;
+    background-color: #006565;
+    box-shadow: rgba(0, 0, 0, 0.16) 0 3px 6px, rgba(0, 0, 0, 0.23) 0 3px 6px;
+}
