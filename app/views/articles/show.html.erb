@@ -2,6 +2,9 @@
   <div class="section-p1">
     <h4><%= @article.title %></h4>
     <p><%= @article.description %></p>
+    <% if @article.user %>
+      <p>By <%= link_to @article.user.username, @article.user %></p>
+    <% end %>
   </div>
   <div class="article-action">
     <a><%= link_to 'Go to articles listing', articles_path, class: "btn-normal" %></a>
