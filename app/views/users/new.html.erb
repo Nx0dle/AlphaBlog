@@ -1,12 +1,12 @@
-<section id="sign-up-body">
+<section id="sign-body">
   <%= render 'shared/errors', obj: @user %>
-  <div id="sign-up-card">
+  <div id="sign-card">
     <div class="sign-up-card-text">
       <h3>Sign up</h3>
       <p>Let's get started with your free account</p>
     </div>
-    <div class="sign-up-card-form">
-      <%= form_with(model: @user, local: true, class: "users-form-container") do |f| %>
+    <div class="sign-card-form">
+      <%= form_with(model: @user, class: "users-form-container") do |f| %>
         <div class="users-form-shared-username">
           <%= f.text_field :username, placeholder: "Username" %>
         </div>
@@ -16,7 +16,7 @@
         <div class="users-form-shared-pass">
           <%= f.password_field :password, placeholder: "Password" %>
         </div>
-        <%= f.submit value: "Sign Up", class: "btn-signup" %>
+        <%= f.submit value: "Sign Up", class: "btn-sign" %>
         <small>Already have an account? <%= link_to 'Log In', signup_path %></small>
       <% end %>
     </div>

@@ -1,0 +1,20 @@
+<section id="sign-body">
+  <div id="sign-card">
+    <div class="sign-card-text">
+      <h3>Log In</h3>
+      <p>Log in to your free Alpha account</p>
+    </div>
+    <div class="sign-card-form">
+      <%= form_with(scope: :session, url: login_path, class: "users-form-container") do |f| %>
+        <div class="users-form-shared-email">
+          <%= f.text_field :email, placeholder: "Email" %>
+        </div>
+        <div class="users-form-shared-pass">
+          <%= f.password_field :password, placeholder: "Password" %>
+        </div>
+        <%= f.submit value: "Log In", class: "btn-sign" %>
+        <small>New here? <%= link_to 'Sign Up', signup_path %></small>
+      <% end %>
+    </div>
+  </div>
+</section>
