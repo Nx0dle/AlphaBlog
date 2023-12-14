@@ -4,3 +4,7 @@
   <%= gravatar_for user, size: 150 %>
   <p>Joined in <%= time_ago_in_words(user.created_at) %></p>
 <% end %>
+
+<div class="apple_pagination">
+  <%= will_paginate @articles %>
+</div>

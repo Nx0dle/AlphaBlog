@@ -3,4 +3,7 @@
     <h1>Articles listing page</h1>
   </div>
   <%= render 'article_listing' %>
+  <div class="apple_pagination">
+    <%= will_paginate @articles %>
+  </div>
 </section>
