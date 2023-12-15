@@ -1,4 +1,5 @@
 class SessionsController< ApplicationController
+  before_action :require_logout, only: [:new, :create]
   def new
 
   end
@@ -20,4 +21,14 @@ class SessionsController< ApplicationController
     flash[:notice] = "logged out."
     redirect_to root_path
   end
+
+  private
+
+  def require_logout
+    if current_user != @user
+      flash[:alert] = "You need to logout to perform that action."
+      redirect_to current_user
+    end
+  end
+
 end
