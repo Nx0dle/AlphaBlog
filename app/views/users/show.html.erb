@@ -1,6 +1,7 @@
 <h1><%= @user.username %>'s profile'</h1>
 <%= gravatar_for @user, size: 200 %>
 <%= render 'articles/article_listing' %>
+<%= link_to 'Delete Profile', user_path(current_user), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" }, class: "btn-side-warning" %>
 <div class="apple_pagination">
   <%= will_paginate @articles %>
 </div>

@@ -1,8 +1,9 @@
 # frozen_string_literal: true
 
 class UsersController < ApplicationController
-  before_action :set_user, only: [:show]
+  before_action :set_user, only: [:show, :destroy]
   before_action :require_logout, only: [:new, :create]
+  before_action :require_same_user, only: [:destroy]
 
   def index
     @users = User.paginate(page: params[:page], per_page: 3)
@@ -26,6 +27,13 @@ class UsersController < ApplicationController
     end
   end
 
+  def destroy
+    @user.destroy
+    session[:user_id] = nil
+    redirect_to root_path
+    flash[:notice] = "User deleted."
+  end
+
   private
   def user_params
     params.require(:user).permit(:username, :email, :password)
@@ -38,6 +46,13 @@ class UsersController < ApplicationController
   def require_logout
     if current_user != @user
       flash[:alert] = "You need to logout to perform that action."
+      redirect_to current_user
+    end
+  end
+
+  def require_same_user
+    if current_user != @user
+      flash[:alert] = "You can't delete someone's account."
       redirect_to current_user
     end
   end
