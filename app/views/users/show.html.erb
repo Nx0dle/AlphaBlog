@@ -10,7 +10,7 @@
     <h3>Articles written by <%= @user.username %></h3>
   </div>
   <% if !@user.articles.empty? %>
-    <%= render 'articles/article_listing' %>
+    <%= render 'articles/articles-listing' %>
   <% else %>
     <p>There is nothing to show</p>
   <% end %>

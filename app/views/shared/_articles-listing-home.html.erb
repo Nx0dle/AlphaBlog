@@ -4,7 +4,7 @@
     <h4><%= link_to "View all", articles_path, class: "all-articles"%></h4>
   </div>
   <div class="articles-grid">
-    <% @articles.each do |article| %>
+    <% @articles.order(id: :desc).each do |article| %>
       <div class="article-card">
         <h6><%= link_to article.title, article_path(article), class: "article-title"%></h6>
         <p class="desc"><%= article.description.truncate(150) %></p>

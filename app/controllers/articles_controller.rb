@@ -9,6 +9,8 @@ class ArticlesController < ApplicationController
   end
 
   def index
+    @articles = Article.all
+    @articles.reverse
     @articles = Article.paginate(page: params[:page], per_page: 6)
   end
 

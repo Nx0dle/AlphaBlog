@@ -15,5 +15,9 @@
     </div>
   </div>
 </section>
-
-<%= render 'shared/articles-listing' %>
+<section id="home-article-index-short" style="padding-bottom: 100px;">
+  <%= render 'shared/articles-listing-home' %>
+  <div class="apple_pagination">
+    <%= will_paginate @articles %>
+  </div>
+</section>
