@@ -24,7 +24,6 @@
 }
 
 body {
-    width: 100%;
     overflow-x: hidden;
 }
 
@@ -85,6 +84,7 @@ p {
 .btn-normal:hover {
     color: grey;
     box-shadow: 5px 2px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 0.6rem;
 }
 
 .btn-side {
@@ -102,11 +102,12 @@ p {
 .btn-side:hover {
     color: teal;
     box-shadow: 5px 2px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 0.6rem;
 }
 
 .btn-side-warning {
     padding: 14px 50px;
-    border-radius: 15px;
+    border-radius: 1rem;
     border: red solid 1px;
     color: black;
     font-weight: 500;
@@ -119,6 +120,7 @@ p {
 .btn-side-warning:hover {
     color: red;
     box-shadow: 5px 2px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 0.6rem;
 }
 
 .created-msg-success,

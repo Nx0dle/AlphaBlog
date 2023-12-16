@@ -1,10 +1,16 @@
-<h1>All Users</h1>
-<% @users.each do | user |%>
-  <p><%= link_to user.username, user %></p>
-  <%= gravatar_for user, size: 150 %>
-  <p>Joined in <%= time_ago_in_words(user.created_at) %></p>
-<% end %>
 
+<section id="users-index-main">
+  <h1>All Bloggers</h1>
+  <div class="users-grid-main">
+    <% @users.each do | user |%>
+      <div class="user-grid-card">
+        <h3><%= link_to user.username, user %></h3>
+        <%= gravatar_for user, size: 150 %>
+        <p>Joined in <%= time_ago_in_words(user.created_at) %></p>
+      </div>
+    <% end %>
+  </div>
+</section>
 <div class="apple_pagination">
   <%= will_paginate @articles %>
 </div>
