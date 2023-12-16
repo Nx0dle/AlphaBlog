@@ -24,11 +24,16 @@
     border-radius: 20px;
 }
 
-#hero .container {
+#hero .items .container {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
+    gap: 1rem;
     width: auto;
+}
+
+#hero .items .container p {
+    font-size: 1rem;
 }
 
 #hero .buttons {
