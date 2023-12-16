@@ -2,7 +2,7 @@
 <section id="users-index-main">
   <h1>All Bloggers</h1>
   <div class="users-grid-main">
-    <% @users.each do | user |%>
+    <% @users.order(id: :desc).each do | user |%>
       <div class="user-grid-card">
         <h3><%= link_to user.username, user %></h3>
         <%= gravatar_for user, size: 150 %>
@@ -12,5 +12,5 @@
   </div>
 </section>
 <div class="apple_pagination">
-  <%= will_paginate @articles %>
+  <%= will_paginate @users %>
 </div>

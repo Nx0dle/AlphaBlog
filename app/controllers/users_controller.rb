@@ -6,7 +6,7 @@ class UsersController < ApplicationController
   before_action :require_same_user, only: [:destroy]
 
   def index
-    @users = User.paginate(page: params[:page], per_page: 3)
+    @users = User.paginate(page: params[:page], per_page: 12)
   end
 
   def show
