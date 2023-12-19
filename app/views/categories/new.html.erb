@@ -1,0 +1,17 @@
+<section id="sign-body">
+  <%= render 'shared/errors', obj: @category %>
+  <div id="sign-card">
+    <div class="sign-card-text">
+      <h3>Create Category</h3>
+      <p>Make your own article category</p>
+    </div>
+    <div class="sign-card-form">
+      <%= form_with(model: @category, class: "users-form-container") do |f| %>
+        <div class="category-form-shared-name">
+          <%= f.text_field :name, placeholder: "Name" %>
+        </div>
+        <%= f.submit value: "Create Category", class: "btn-sign" %>
+      <% end %>
+    </div>
+  </div>
+</section>
