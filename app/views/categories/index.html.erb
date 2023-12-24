@@ -1,0 +1,12 @@
+<h1>Categories</h1>
+<div class="articles-grid">
+  <% @categories.order(id: :desc).each do |category| %>
+    <div class="article-card">
+      <h6><%= link_to category.name, category_path(category)%></h6>
+      <p><%=  time_ago_in_words(category.created_at) %></p>
+    </div>
+  <% end %>
+</div>
+<div class="apple_pagination">
+  <%= will_paginate @articles %>
+</div>
