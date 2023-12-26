@@ -1,0 +1,23 @@
+<section id="sign-body">
+  <%= render 'shared/errors', obj: @user %>
+  <div id="sign-card">
+    <div class="sign-card-text">
+      <h3>Edit profile</h3>
+      <p>Change your personal information</p>
+    </div>
+    <div class="sign-card-form">
+      <%= form_with(model: @user, class: "users-form-container") do |f| %>
+        <div class="users-form-shared-username">
+          <%= f.text_field :username, placeholder: "Username" %>
+        </div>
+        <div class="users-form-shared-email">
+          <%= f.text_field :email, placeholder: "Email" %>
+        </div>
+        <div class="users-form-shared-pass">
+          <%= f.password_field :password, placeholder: "Password" %>
+        </div>
+        <%= f.submit value: "Save", class: "btn-sign" %>
+      <% end %>
+    </div>
+  </div>
+</section>

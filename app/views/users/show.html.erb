@@ -2,9 +2,12 @@
   <div class="user-data">
     <%= gravatar_for @user, size: 200 %>
     <h1><% if current_user&.admin? && @user == current_user %><strong>(Admin) </strong><% end %><%= @user.username %>'s profile'</h1>
-    <% if logged_in? && (current_user.admin? || @user == current_user) %>
-      <%= link_to 'Delete Profile', user_path(@user), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" }, class: "btn-side-warning" %>
-    <% end %>
+    <div class="user-action">
+      <% if logged_in? && (current_user.admin? || @user == current_user) %>
+        <%= link_to 'Edit Profile', edit_user_path(@user), class: "btn-side" %>
+        <%= link_to 'Delete Profile', user_path(@user), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" }, class: "btn-side-warning" %>
+      <% end %>
+    </div>
   </div>
   <div class="text-main-users">
     <h3>Articles written by <%= @user.username %></h3>
