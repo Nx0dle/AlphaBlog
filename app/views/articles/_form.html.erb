@@ -10,6 +10,12 @@
       <strong><%= f.label :description %><br/></strong>
       <%= f.text_area :description, placeholder: "Write Description..." %>
     </div>
+    <div class="article-form-shared-ctg">
+        <strong><%= f.label :category %><br/></strong>
+        <%= f.collection_check_boxes :category_ids, Category.all, :id, :name,
+                                multiple: true %>
+    </div>
+
     <a class="btn-submit">
       <%= f.submit %>
     </a>
