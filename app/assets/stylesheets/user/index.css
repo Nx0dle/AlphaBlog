@@ -37,6 +37,11 @@
     font-size: 1.5rem;
 }
 
+#users-index-main .users-grid-main .user-grid-card h6 {
+    font-weight: 400;
+    color: teal;
+}
+
 #users-index-main .users-grid-main .user-grid-card h3 a:hover {
     text-decoration: underline;
 }

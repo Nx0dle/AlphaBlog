@@ -1,12 +1,15 @@
-<h1>Categories</h1>
-<div class="articles-grid">
-  <% @categories.order(id: :desc).each do |category| %>
-    <div class="article-card">
-      <h6><%= link_to category.name, category_path(category)%></h6>
-      <p><%=  time_ago_in_words(category.created_at) %></p>
-    </div>
-  <% end %>
-</div>
+<section id="users-index-main">
+  <h1>Categories</h1>
+  <div class="users-grid-main">
+    <% @categories.order(id: :desc).each do |category| %>
+      <div class="user-grid-card">
+        <h3><%= link_to category.name, category_path(category)%></h3>
+        <h6><%= pluralize(category.articles.count, "Articles") %></h6>
+        <p>Created <%= time_ago_in_words(category.created_at) %> ago</p>
+      </div>
+    <% end %>
+  </div>
+</section>
 <div class="apple_pagination">
   <%= will_paginate @articles %>
 </div>

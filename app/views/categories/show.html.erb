@@ -1,1 +1,22 @@
-<h1>Category: <%= @category.name %></h1>
+<section id="users-show-main">
+  <div class="user-data">
+    <h1>Category: <%= @category.name %></h1>
+    <div class="user-action">
+      <% if logged_in? && (current_user.admin? || @user == current_user) %>
+        <%= link_to 'Edit category', edit_category_path(@category), class: "btn-side" %>
+        <%= link_to 'Delete category', category_path(@category), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" }, class: "btn-side-warning" %>
+      <% end %>
+    </div>
+  </div>
+  <div class="text-main-users">
+    <h3>Articles about <%= @category.name %></h3>
+  </div>
+  <% if @category.articles.any? %>
+    <%= render 'articles/articles-listing' %>
+  <% else %>
+    <p>There is nothing to show</p>
+  <% end %>
+</section>
+<div class="apple_pagination">
+  <%= will_paginate @articles %>
+</div>
