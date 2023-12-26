@@ -12,12 +12,15 @@
     </div>
     <div class="article-form-shared-ctg">
         <strong><%= f.label :category %><br/></strong>
-        <%= f.collection_check_boxes :category_ids, Category.all, :id, :name,
-                                multiple: true %>
+      <div class="ctg-ch-boxes">
+        <%= f.collection_check_boxes :category_ids, Category.all, :id, :name do |c| %>
+          <div class="ctg-ch-box"><%= c.check_box + c.label %></div>
+        <% end %>
+      </div>
     </div>
 
-    <a class="btn-submit">
-      <%= f.submit %>
+    <a>
+      <%= f.submit class: "btn-side" %>
     </a>
   <% end %>
 </section>

@@ -11,7 +11,7 @@ class ArticlesController < ApplicationController
   def index
     @articles = Article.all
     @articles.reverse
-    @articles = Article.paginate(page: params[:page], per_page: 6)
+    @articles = Article.paginate(page: params[:page], per_page: 9)
   end
 
   def new
@@ -19,7 +19,6 @@ class ArticlesController < ApplicationController
   end
 
   def create
-    debugger
     @article = Article.new(article_params)
     @article.user = current_user
     if @article.save

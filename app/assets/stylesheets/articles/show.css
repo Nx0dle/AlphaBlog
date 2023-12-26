@@ -13,6 +13,14 @@
     gap: 30px;
 }
 
+#article-show .cate-wrap {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    max-width: 40vw;
+}
+
 #article-show .article-action {
     display: flex;
     flex-direction: row;

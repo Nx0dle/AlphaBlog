@@ -2,10 +2,9 @@
 
 .articles-grid {
     display: grid;
-    grid-template-columns: 33% 33% 33%;
-    grid-template-rows: 33% 33% 33%;
-    grid-row-gap: 100px;
-    grid-column-gap: 20px;
+    grid-template: 1fr 1fr 1fr / 1fr 1fr 1fr;
+    grid-row-gap: 80px;
+    grid-column-gap: 30px;
 }
 
 .articles-grid .article-card {
@@ -26,6 +25,13 @@
 .articles-grid .article-card .desc {
     font-size: 16px;
     color: #2E2F30;
+}
+
+.articles-grid .article-card .cate-wrap {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
 .articles-grid .article-card .read-more {

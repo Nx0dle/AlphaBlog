@@ -3,6 +3,9 @@
     <div class="article-card">
       <h6><%= link_to article.title, article_path(article), class: "article-title"%></h6>
       <p class="desc-expanded"><%= article.description.truncate(400) %></p>
+      <% if article.categories.any? %>
+        <p class="cate-wrap"><%= render article.categories %></p>
+      <%  end %>
       <%= link_to 'View full article', article_path(article), class: "read-more" %>
       <p><%=  time_ago_in_words(article.created_at) %></p>
     </div>

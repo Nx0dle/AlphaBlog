@@ -1,6 +1,9 @@
 <section id="article-show">
   <div class="section-p1">
     <h4><%= @article.title %></h4>
+    <% if @article.categories.any? %>
+      <div class="cate-wrap"><%= render @article.categories %></div>
+    <% end %>
     <p><%= @article.description %></p>
     <% if @article.user %>
       <p>By <%= link_to @article.user.username, @article.user %></p>
